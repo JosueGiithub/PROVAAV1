@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { Button, Image, Input, Text } from 'react-native-elements';
 import  Icon  from 'react-native-vector-icons/FontAwesome';
-import styles from '../Style/MainStyle';
+import Styles from '../Style/MainStyle';
 import 'react-native-gesture-handler';
 
 
@@ -24,7 +24,7 @@ export default function Login({Navigation}) {
   }
 
   return (
-    <View style={[styles.container, specificStyle.specificContainer]}>
+    <View style={[Styles.container, specificStyle.specificContainer]}>
       <Text h2></Text>
       <StatusBar style="auto" />
       <Input
@@ -57,7 +57,7 @@ export default function Login({Navigation}) {
 }
 const specificStyle = StyleSheet.create({
   specificContainer:{
-    backgroundColor: 'black'
+    backgroundColor: 'Blue'
   }
 })
 
