@@ -1,31 +1,21 @@
-import React, { useCallback, useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import { Button, ButtonGroup, Input, Text } from 'react-native-elements';
-import  Icon  from 'react-native-vector-icons/FontAwesome';
-import Styles from './style/MainStyle';
+import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import Login from './screens/Login';
-import Principal from './screens/Principal';
-import 'react-native-gesture-handler';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import Routes from './src/routes';
 
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
-function MyStack() {
+export default function App() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Principal" component={Principal} />
-    </Stack.Navigator>
+    <NavigationContainer>
+      <Routes/>
+    </NavigationContainer>
+    
   );
 }
-export default function App() {
-  return(
-    <NavigationContainer>
-      <MyStack/>
-    </NavigationContainer>
-  )
-   
-}
+
+
+
